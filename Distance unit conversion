@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>  // for setting precision
+
+using namespace std;
+
+int main() {
+    // Variable to store the input distance in kilometers
+    double distanceKm;
+
+    // Conversion factors
+    const double kmToMile = 0.621371;
+    const double kmToFoot = 3280.84;
+
+    // Input: Get the distance in kilometers
+    cout << "Enter the distance between two cities (in km): ";
+    cin >> distanceKm;
+
+    // Convert the distance to miles and feet
+    double distanceMiles = distanceKm * kmToMile;
+    double distanceFeet = distanceKm * kmToFoot;
+
+    // Output: Display the results
+    cout << fixed << setprecision(2); // Set precision to 2 decimal places
+    cout << "The distance between the two cities is " << distanceKm << " km or "
+         << distanceMiles << " miles or " << distanceFeet << " feet." << endl;
+
+    return 0;
+}
