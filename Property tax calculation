@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double assessedValue, taxableAmount, propertyTax;
+    const double TAX_RATE = 1.05; 
+    cout << "Enter the assessed value of the property: ";
+    cin >> assessedValue;
+    taxableAmount = assessedValue * 0.92;
+    propertyTax = (taxableAmount / 100.0) * TAX_RATE;
+    cout << "Assessed Value: " << assessedValue << endl;
+    cout << "Taxable Amount: " << taxableAmount << endl;
+    cout << "Tax Rate for each Rs. 100.00 " << TAX_RATE << endl;
+    cout << "Property Tax " << propertyTax << endl;
+    return 0;
+}
