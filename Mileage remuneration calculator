@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    // Variables to store the odometer readings
+    double beginningOdometer, endingOdometer, milesTraveled, remuneration;
+
+    // Output header
+    cout << "MILEAGE REMUNERATION CALCULATOR" << endl;
+
+    // Input: Get beginning and ending odometer readings
+    cout << "Enter beginning odometer reading: ";
+    cin >> beginningOdometer;
+
+    cout << "Enter ending odometer reading: ";
+    cin >> endingOdometer;
+
+    // Calculate miles traveled
+    milesTraveled = endingOdometer - beginningOdometer;
+
+    // Calculate remuneration
+    remuneration = milesTraveled * 25; // Rs. 25 per mile
+
+    // Output: Display the results
+    cout << fixed << setprecision(1); // Set precision to 1 decimal place
+    cout << "You travelled " << milesTraveled << " miles. At Rs.25 per mile, your remuneration is Rs." << remuneration << endl;
+
+    return 0;
+}
