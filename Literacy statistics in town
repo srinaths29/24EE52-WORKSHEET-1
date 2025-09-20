@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Input: Total population of the town
+    int population;
+    cout << "Enter the total population of the town: ";
+    cin >> population;
+
+    // Given percentages
+    double menPercentage = 52.0;
+    double totalLiteracyPercentage = 48.0;
+    double literateMenPercentage = 35.0;
+
+    // Calculations
+    int totalMen = (menPercentage / 100) * population;
+    int totalWomen = population - totalMen;
+
+    int literateMen = (literateMenPercentage / 100) * population;
+    int illiterateMen = totalMen - literateMen;
+
+    int totalLiteracy = (totalLiteracyPercentage / 100) * population;
+    int literateWomen = totalLiteracy - literateMen;
+    int illiterateWomen = totalWomen - literateWomen;
+
+    // Output the results
+    cout << "Total number of women: " << totalWomen << endl;
+    cout << "Illiterate men: " << illiterateMen << endl;
+    cout << "Illiterate women: " << illiterateWomen << endl;
+
+    return 0;
+}
