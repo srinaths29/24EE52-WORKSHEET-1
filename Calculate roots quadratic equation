@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>  // For sqrt and complex numbers
+#include <iomanip>  // For setting precision
+
+using namespace std;
+
+int main() {
+    double a, b, c, discriminant, root1, root2, realPart, imagPart;
+
+    // Input: Coefficients of the quadratic equation
+    cout << "Enter coefficients a, b, and c for the quadratic equation (ax^2 + bx + c = 0):" << endl;
+    cout << "a = ";
+    cin >> a;
+    cout << "b = ";
+    cin >> b;
+    cout << "c = ";
+    cin >> c;
+
+    // Calculate discriminant
+    discriminant = (b * b) - (4 * a * c);
+
+    // Check the nature of the roots
+    if (discriminant > 0) {
+        // Two distinct real roots
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+        cout << "The equation has two real roots: " << fixed << setprecision(2) << root1 << " and " << root2 << endl;
+    }
+    else if (discriminant == 0) {
+        // One real root (repeated root)
+        root1 = -b / (2 * a);
+        cout << "The equation has one real root: " << fixed << setprecision(2) << root1 << endl;
+    }
+    else {
+        // Complex roots
+        realPart = -b / (2 * a);
+        imagPart = sqrt(-discriminant) / (2 * a);
+        cout << "The equation has complex roots: "
+             << fixed << setprecision(2) << realPart << " + " << imagPart << "i and "
+             << fixed << setprecision(2) << realPart << " - " << imagPart << "i" << endl;
+    }
+
+    return 0;
+}
