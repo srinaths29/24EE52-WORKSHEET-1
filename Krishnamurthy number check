@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int fact(int a) {
+    if (a==0)
+        return 1;
+    else
+        return a*fact(a-1);
+}
+
+int main() {
+    int x,n,d,s=0;
+    cout<<"Enter a number: ";
+    cin>>x;
+    n=x;
+    while(n!=0)
+    {
+        d=n%10;
+        s+=fact(d);
+        n=n/10;
+    }
+    if(s==x)
+        cout << "Krishnamurthy number"<< endl;
+    else
+        cout << "not a Krishnamurthy number"<< endl;
+    return 0;
+}
