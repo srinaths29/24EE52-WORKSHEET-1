@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    string s1, s2,s3,s4;
+    s1="naveenmosesdinesg@gmail.com";
+    s2="Moses@123";
+    cout << "Enter username string: ";
+    getline(cin, s3);   // input with spaces allowed
+    cout << "Enter second string: ";
+    getline(cin, s4);
+
+    if (s1 == s3 && s2==s4) {
+        cout << "Logged In" << endl;
+    } else {
+        cout << "Incorrect Password." << endl;
+    }
+
+    return 0;
+}
