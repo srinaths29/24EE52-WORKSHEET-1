@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double units, waterTax;
+
+    // Input: Number of units of water consumed
+    cout << "Enter the number of water units consumed: ";
+    cin >> units;
+
+    // Calculate water tax based on the slabs
+    if (units < 100) {
+        // Cost is Rs.1 per unit
+        waterTax = units * 1.0;
+    } 
+    else if (units >= 100 && units <= 500) {
+        // Cost is Rs.1.5 per unit
+        waterTax = units * 1.5;
+    } 
+    else {
+        // Cost is Rs.3 per unit
+        waterTax = units * 3.0;
+    }
+
+    // Output the calculated water tax
+    cout << "The water tax for " << units << " units is Rs." << waterTax << endl;
+
+    return 0;
+}
